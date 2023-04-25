@@ -3,5 +3,4 @@ deploy:
     name: alpine/k8s:1.27.1
   script:
     - kubectl get pods
-    - kubectl create namespace voting-app
     - kubectl create -f k8s-specifications/ --namespace voting-app
