@@ -1,0 +1,5 @@
+deploy:
+  image:
+    name: alpine/k8s:1.27.1
+  script:
+    - kubectl get pods
