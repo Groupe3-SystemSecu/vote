@@ -4,4 +4,3 @@ deploy:
   script:
     - kubectl create namespace voting-app
     - kubectl create -f k8s-specifications/ --namespace voting-app
-  when: always
