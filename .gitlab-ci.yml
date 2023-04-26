@@ -1,6 +1,6 @@
 deploy:
   image:
-    name: alpine/k8s:1.27.1
+    name: docker
   script:
     - docker build vote -t 13.229.237.230:30001/voting-app/vote
     - docker build result -t 13.229.237.230:30001/voting-app/result
