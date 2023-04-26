@@ -1,7 +1,7 @@
 build-and-deploy:
   image: alpine/k8s:1.27.1
   script:
-    - kubectl apply -f k8s-specifications/
+    - kubectl apply -f k8s-specifications/ -n voting-app
 
 build:
   image:
