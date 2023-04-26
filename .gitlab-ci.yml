@@ -1,6 +1,7 @@
 deploy:
   image:
-    name: moby/buildkit:rootless
+    name: moby/buildkit
+    entrypoint: buildctl-daemonless.sh
   script:
     - buildctl build --frontend=dockerfile.v0 --local context=vote --local dockerfile=vote
     - docker build result -t 13.229.237.230:30001/voting-app/result
