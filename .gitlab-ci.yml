@@ -1,8 +1,8 @@
 deploy:
   image:
-    name: docker
+    name: moby/buildkit
   script:
-    - docker build vote -t 13.229.237.230:30001/voting-app/vote
+    - buildctl build --frontend=dockerfile.v0 --local context=vote --local dockerfile=vote
     - docker build result -t 13.229.237.230:30001/voting-app/result
     - docker build worker -t 13.229.237.230:30001/voting-app/worker
     - docker build seed-data -t 13.229.237.230:30001/voting-app/seed-data
